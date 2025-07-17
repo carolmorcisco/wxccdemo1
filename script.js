@@ -18,7 +18,7 @@ const sendSMSWelcomeWebhook =
   "https://hooks.us.webexconnect.io/events/HMFY31RLK8";
 
 //This is the URL for requesting and callback, the WxConnect Script runs a HTTP POST to initial a call back request.
-//const sendCallbackWebhook = "https://hooks-us.imiconnect.io/events/1FUEK2TG07"
+const sendCallbackWebhook = "https://hooks-us.imiconnect.io/events/1FUEK2TG07"
 
 //If you are going to inject JDS events from this web page you will need to provide you ds SAS key.  IT must have read/write access to your JDS Tenant.
 //The Web page will inject an event each time you visit or refresh the page, see the onWindowLoad function and uncomment the function call to inject the "page visit" JDS event
@@ -148,9 +148,9 @@ function onLoadWindow() {
   writeVisitPageEventJDS();
 
   //Lets stick some constants into the DOM so we can access them in the webpage using their ID
-  //var simpleText = ivrPhoneNumber;
-  //var finalSplitText = simpleText.split("_");
-  //var splitText = finalSplitText[0];
+  var simpleText = ivrPhoneNumber;
+  var finalSplitText = simpleText.split("_");
+  var splitText = finalSplitText[0];
   document.getElementById("ivrPhoneNumber").innerHTML = ivrPhoneNumber;
 }
 
