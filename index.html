@@ -47,8 +47,9 @@
             <button class="button button4" onclick="openSMSForm()">Envíenos un SMS <i class="fa fa-comments"></i></button>
             
             <button class="button button4" onclick="openJourneyForm()">Journey Data Service Demo <i class="fa fa-file-text"></i></button>
+            <!--
             <button class="button button4" onclick=" window.open('http://143.244.183.190/admin/dashboard','_blank')">Fill out a Credit Application <i class="fa fa-file-text"></i></button>
-    
+            -->
           </div>
         </div>
         <div class="modal-footer">
@@ -105,24 +106,24 @@
     </div>
   <div class="form-popup" id="callbackForm">
         <form class="form-container">
-          <h3>Request a Callback</h3> <h5 style="color:#FF0000";> Dont waste time waiting in queue, our experts will call you!</h5>
+          <h3>Request a Callback</h3> <h5 style="color:#FF0000";> No pierda tiempo esperando en la fila; nuestros expertos se pondrán en contacto con usted directamente! </h5>
           
-          <label for="callbackName"><b>Your name</b></label>
-          <input type="text" placeholder="Enter your name" name="callbackName" id="callbackName" required>
+          <label for="callbackName"><b>Su Nombre</b></label>
+          <input type="text" placeholder="Introduzca su nombre" name="callbackName" id="callbackName" required>
           
-          <label for="callbackNumber"><b>Phone Number</b></label>
-          <input type="text" placeholder="Enter a 10-digit mobile number" name="callbackNumber" id="callbackNumber" required>
+          <label for="callbackNumber"><b>Número</b></label>
+          <input type="text" placeholder="introduzca un numero de 10 digitos" name="callbackNumber" id="callbackNumber" required>
           
-          <label for="callbackDepartment"><b>Callback Reason</b></label>
+          <label for="callbackDepartment"><b>Razón Callback</b></label>
           <select class="form-select" id="callbackDepartment" required>
                 <option value="">--Please choose an option--</option>
-                <option value="Sales">Sales Questions</option>
-                <option value="Billing">Billing Issues</option>
-                <option value="Appointment">Appointments</option>
-                <option value="Tech Support">Technical Support</option>
+                <option value="Sales">Ventas </option>
+                <option value="Billing">Cobros</option>
+                <option value="Appointment">Citas</option>
+                <option value="Tech Support">Soporte técnico web</option>
           </select>
           <div>
-          <label for="callbackReason"><b>Message</b></label>
+          <label for="callbackReason"><b>Mensaje </b></label>
           </div>
           <div>
           <textarea class="form-control" id="callbackReason" rows="2" required></textarea>
