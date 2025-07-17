@@ -194,7 +194,7 @@ const writeVisitPageEventJDS = async () => {
   var accessToken = tokenJson.token;
 
   const response = await fetch(
-    "https://api-jds.prod-useast1.ciscowxdap.com/publish/v1/api/event?workspaceId=" +
+    "https://api-jds.wxdap-produs1.webex.com/publish/v1/api/event?workspaceId=" +
       CHJDSProjectID,
     {
       method: "POST",
@@ -243,7 +243,7 @@ const injectCustomJDS = async () => {
   var accessToken = tokenJson.token;
 
   const response = await fetch(
-    "https://api-jds.prod-useast1.ciscowxdap.com/publish/v1/api/event?workspaceId=" +
+    "https://api-jds.wxdap-produs1.webex.com/publish/v1/api/event?workspaceId=" +
       CHJDSProjectID,
     {
       method: "POST",
@@ -290,7 +290,7 @@ const injectPasswordLockoutJDS = async () => {
   var accessToken = tokenJson.token;
 
   const response = await fetch(
-    "https://api-jds.prod-useast1.ciscowxdap.com/publish/v1/api/event?workspaceId=" +
+    "https://api-jds.wxdap-produs1.webex.com/publish/v1/api/event?workspaceId=" +
       CHJDSProjectID,
     {
       method: "POST",
