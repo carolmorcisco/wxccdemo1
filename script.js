@@ -504,6 +504,35 @@ const includeHTML = () => {
     }
   }
 };
+window.addEventListener('load', function () {
+  const url = 'https://hooks.us.webexconnect.io/events/UJUF0JE86Z'; // ← Reemplaza con tu webhook real
+
+  const data = {
+    page: window.location.href,
+    browser: getBrowserName(),
+    time: new Date().toLocaleString(),
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    language: navigator.language
+  };
+
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).catch(err => console.error('Error sending webhook:', err));
+});
+
+function getBrowserName() {
+  const ua = navigator.userAgent;
+
+  if (ua.includes('Firefox')) return 'Firefox';
+  if (ua.includes('Chrome') && !ua.includes('Edg') && !ua.includes('OPR')) return 'Chrome';
+  if (ua.includes('Safari') && !ua.includes('Chrome')) return 'Safari';
+
+  return 'Unknown';
+};
 
 // This is a single line JS comment
 /*
