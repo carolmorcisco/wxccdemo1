@@ -214,7 +214,7 @@ const writeVisitPageEventJDS = async () => {
           lastName: lastName,
           phone: phone,
           email: email,
-          url: "http://www.glitch.me",
+          url: "http://www.cumulus.com",
           channelType: "Page Visit",
         },
       }), // string or object
