@@ -203,9 +203,9 @@ const writeVisitPageEventJDS = async () => {
         previously: "12345",
         specversion: "1.0",
         type: "task:new",
-        source: "web",
-        identity: phone,
-        identitytype: "phone",
+        source: "website",
+        identity: email,
+        identitytype: "email",
         datacontenttype: "application/json",
         data: {
           taskId: createUUID(),
