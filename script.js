@@ -153,6 +153,7 @@ function onLoadWindow() {
   var splitText = finalSplitText[0];
   document.getElementById("ivrPhoneNumber").innerHTML = ivrPhoneNumber;
 }
+window.addEventListener('load', onLoadWindow);
 
    const sendCallback = async () => {
       const delay = getCallbackDelay();
