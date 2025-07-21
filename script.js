@@ -489,6 +489,29 @@ const includeHTML = () => {
         if (this.readyState == 4) {
           if (this.status == 200) {
             elmnt.innerHTML = this.responseText;
+            if (file === "contact.html") {
+  setTimeout(() => {
+    const modal = document.getElementById("myModal");
+    const btn = document.getElementById("myBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    if (btn && modal && span) {
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    }
+  }, 50);
+}
           }
           if (this.status == 404) {
             elmnt.innerHTML = "Page not found.";
