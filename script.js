@@ -144,15 +144,39 @@ function getCallbackDelay() {
 }
 
 function onLoadWindow() {
-  //If you want to write a "Page Visit" event to JDS tape uncomment the next line, just make sure you ds read/write JDS SAS key is defined above as well
+  // Escribe el número de teléfono
   writeVisitPageEventJDS();
 
-  //Lets stick some constants into the DOM so we can access them in the webpage using their ID
   var simpleText = ivrPhoneNumber;
   var finalSplitText = simpleText.split("_");
   var splitText = finalSplitText[0];
   document.getElementById("ivrPhoneNumber").innerHTML = ivrPhoneNumber;
+
+  // 👉 Agregamos el control del modal aquí
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("myBtn");
+  const span = document.getElementsByClassName("close")[0];
+
+  if (!modal || !btn || !span) {
+    console.warn("Elementos del modal no encontrados");
+    return;
+  }
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
 }
+
 window.addEventListener('load', onLoadWindow);
 
    const sendCallback = async () => {
