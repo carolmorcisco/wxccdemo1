@@ -481,7 +481,7 @@ const includeHTML = () => {
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
     /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("/contact.hml");
+    file = elmnt.getAttribute("/contact.html");
     if (file) {
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
