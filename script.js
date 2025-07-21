@@ -143,26 +143,22 @@ function getCallbackDelay() {
   }
 }
 
-function onLoadWindow() {
-  // Escribe el número de teléfono
-  writeVisitPageEventJDS();
+console.log("✅ script.js cargado");
 
-  var simpleText = ivrPhoneNumber;
-  var finalSplitText = simpleText.split("_");
-  var splitText = finalSplitText[0];
-  document.getElementById("ivrPhoneNumber").innerHTML = ivrPhoneNumber;
-
-  // 👉 Agregamos el control del modal aquí
+window.addEventListener('load', function () {
   const modal = document.getElementById("myModal");
   const btn = document.getElementById("myBtn");
   const span = document.getElementsByClassName("close")[0];
 
   if (!modal || !btn || !span) {
-    console.warn("Elementos del modal no encontrados");
+    console.warn("⚠️ Elementos no encontrados:", { modal, btn, span });
     return;
   }
 
+  console.log("✅ Modal, botón y cierre encontrados");
+
   btn.onclick = function () {
+    console.log("🟢 Se hizo clic en el botón");
     modal.style.display = "block";
   };
 
@@ -175,7 +171,7 @@ function onLoadWindow() {
       modal.style.display = "none";
     }
   };
-}
+});
 
 window.addEventListener('load', onLoadWindow);
 
