@@ -100,6 +100,11 @@ function sendCallback() {
   document.getElementById("callForm").style.display = "none";
 }
 
+function sendSMS() {
+  alert("SMS enviado con éxito");
+  document.getElementById("smsForm").style.display = "none";
+}
+
 function closeCallForm() {
   document.getElementById("callForm").style.display = "none";
 }
