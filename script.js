@@ -90,21 +90,6 @@ function openCallForm() {
   document.getElementById("callForm").style.display = "block";
 }
 
-function sendEmail() {
-  alert("Correo enviado con éxito");
-  document.getElementById("emailForm").style.display = "none";
-}
-
-function sendCallback() {
-  alert("Llamada programada con éxito");
-  document.getElementById("callForm").style.display = "none";
-}
-
-function sendSMS() {
-  alert("SMS enviado con éxito");
-  document.getElementById("smsForm").style.display = "none";
-}
-
 function closeCallForm() {
   document.getElementById("callForm").style.display = "none";
 }
