@@ -484,9 +484,6 @@ const sendSMS = async () => {
     headers: {
       "Content-Type": "application/json",
     },
-    document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("botonEnviarSMS").addEventListener("click", sendSMS);
-});
   });
   const myJson = await response.json(); //extract JSON from the http response
 
