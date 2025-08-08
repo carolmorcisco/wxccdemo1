@@ -471,7 +471,7 @@ const sendEmail = async () => {
   closeEmailForm();
 };
 
-window.sendSMS = async () => {
+const sendSMS = async () => {
   const response = await fetch(sendSMSWelcomeWebhook, {
     method: "POST",
     body: JSON.stringify({
@@ -484,6 +484,9 @@ window.sendSMS = async () => {
     headers: {
       "Content-Type": "application/json",
     },
+    document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("botonEnviarSMS").addEventListener("click", sendSMS);
+});
   });
   const myJson = await response.json(); //extract JSON from the http response
 
