@@ -471,7 +471,7 @@ const sendEmail = async () => {
   closeEmailForm();
 };
 
-const sendSMS = async () => {
+window.sendSMS = async () => {
   const response = await fetch(sendSMSWelcomeWebhook, {
     method: "POST",
     body: JSON.stringify({
