@@ -173,7 +173,7 @@ window.addEventListener('load', function () {
   };
 });
 
-window.addEventListener('load', onLoadWindow);
+// window.addEventListener('load', onLoadWindow);
 
    const sendCallback = async () => {
       const delay = getCallbackDelay();
